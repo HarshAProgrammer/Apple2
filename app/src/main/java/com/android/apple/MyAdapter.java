@@ -1,6 +1,7 @@
 package com.android.apple;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,12 +31,21 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductViewHolder productViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ProductViewHolder productViewHolder, int i) {
         productViewHolder.imageView.setImageResource(myProductList.get(i).getProductImage());
         productViewHolder.mTitle.setText(myProductList.get(i).getProductName());
         productViewHolder.mDescription.setText(myProductList.get(i).getProductDescription());
         productViewHolder.mPrice.setText(myProductList.get(i).getProductPrice());
 
+        productViewHolder.mCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openDetailActivityFromMContext = new Intent(mContext,DetailActivity.class);
+                openDetailActivityFromMContext.putExtra("Image",myProductList.get(productViewHolder.getAdapterPosition()).getProductImage());
+                openDetailActivityFromMContext.putExtra("Description",myProductList.get(productViewHolder.getAdapterPosition()).getProductDescription());
+                mContext.startActivity(openDetailActivityFromMContext);
+            }
+        });
     }
 
     @Override
