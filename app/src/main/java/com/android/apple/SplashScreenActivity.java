@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 public class SplashScreenActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 5000;
