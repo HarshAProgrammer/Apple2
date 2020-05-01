@@ -55,7 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
     public void setAnimation(View viewToAnimate,int position){
         if(position>lastPosition){
             ScaleAnimation MainActivityAnimation = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-            MainActivityAnimation.setDuration(1500);
+            MainActivityAnimation.setDuration(550);
             viewToAnimate.startAnimation(MainActivityAnimation);
             lastPosition = position;
         }
@@ -76,10 +76,10 @@ class ProductViewHolder extends RecyclerView.ViewHolder{
 
     public ProductViewHolder( View itemView) {
         super(itemView);
-        imageView = itemView.findViewById(R.id.ivImage);
-        mTitle  = itemView.findViewById(R.id.tvTitle);
-        mDescription = itemView.findViewById(R.id.tvDescription);
-        mPrice = itemView.findViewById(R.id.tvPrice);
-        mCardView = itemView.findViewById(R.id.myCardView);
+        imageView = itemView.findViewById(R.id.ivRecyclerRowItemImage);
+        mTitle  = itemView.findViewById(R.id.tvRecyclerRowItemTitle);
+        mDescription = itemView.findViewById(R.id.tvRecyclerRowItemDescription);
+        mPrice = itemView.findViewById(R.id.tvRecyclerRowItemPrice);
+        mCardView = itemView.findViewById(R.id.cvRecyclerRowItemCard);
     }
 }
