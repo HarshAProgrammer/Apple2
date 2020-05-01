@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
     private Context mContext;
     private List<ProductData> myProductList;
+    private int lastPosition = -1;
 
     public MyAdapter(Context mContext, List<ProductData> myProductList) {
         this.mContext = mContext;
@@ -46,8 +49,21 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
                 mContext.startActivity(openDetailActivityFromMContext);
             }
         });
-    }
 
+        setAnimation(productViewHolder.itemView,i);
+    }
+    public void setAnimation(View viewToAnimate,int position){
+        if(position>lastPosition){
+            ScaleAnimation MainActivityAnimation = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+            MainActivityAnimation.setDuration(1500);
+            viewToAnimate.startAnimation(MainActivityAnimation);
+            lastPosition = position;
+        }
+
+
+
+
+    }
     @Override
     public int getItemCount() {
         return myProductList.size();

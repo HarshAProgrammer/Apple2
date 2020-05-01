@@ -20,7 +20,7 @@
         android:id="@+id/textsplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome To Apple Inc"
+        android:text="Lots to love.Less to spend."
         android:layout_marginTop="200dp"
         android:layout_marginBottom="150dp"
         android:textColor="@color/colorAccent"
