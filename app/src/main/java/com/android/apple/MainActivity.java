@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
                 "•\tFront Camera\t\t7MP\n" +
                 "•\tRear Camera\t\t12MP + 12MP\n" +
                 "•\tStorage\t\t64GB-256GB-512GB\n" +
-                "•\tOS\t\t\tiOS 12\n", ":$1099-$1249-$1449", R.drawable.iphonexsmax);
+                "•\tOS\t\t\tiOS 12\n", "$1099-$1249-$1449", R.drawable.iphonexsmax);
         myProductList.add(mProductData);
         mProductData = new ProductData("iPhone XR", "•\tDisplay\t\t\t6.10-inch (828x1792)\n" +
                 "•\tProcessor\t\tApple A12 Bionic\n" +
