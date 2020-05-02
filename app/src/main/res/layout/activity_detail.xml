@@ -9,8 +9,10 @@
     tools:context=".DetailActivity">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="500dp"
         android:id="@+id/ivDetailImage"
+        android:layout_marginTop="10dp"
+        android:layout_weight="4"
         android:src="@drawable/iphone"
         android:scaleType="centerCrop"/>
     <TextView
@@ -21,6 +23,7 @@
         android:text="@string/product_detail_description"
         android:textColor="@color/colorDetailDescription"
         android:textSize="19sp"
+        android:scrollbars="vertical"
         android:id="@+id/tvDetailDescription"/>
 
 </LinearLayout>
