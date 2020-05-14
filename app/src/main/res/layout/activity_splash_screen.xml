@@ -28,7 +28,7 @@
         android:layout_below="@+id/imagesplash"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textSize="34sp"
+        android:textSize="20sp"
         ></TextView>
 
 

@@ -3,13 +3,18 @@
     <color name="colorPrimary">#A7A7A8</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#F3000908</color>
-    <color name="colorPrice">#F0FEFEFF</color>
-    <color name="colorTitle">#FCFDFD</color>
-    <color name="colorDescription">#B6FFFCFC</color>
+
     <color name="colorSplashBackground">#000908</color>
     <color name="colorSplashText">#FFFFFF</color>
-    <color name="colorMainBackground">#FCFDFD</color>
-    <color name="colorDetailDescription">#D6FFFFFF</color>
-    <color name="colorCardViewBackground">#000908</color>
+
+
+    <color name="colorTitle">#50a2e1</color>
+    <color name="colorPrice">#692bb1</color>
+    <color name="colorDescription">#00006c</color>
+    <color name="colorMainBackground">#f5f5f5</color>
+    <color name="colorCardViewBackground">#010101</color>
+
+    <color name="colorDetailDescription">#f5f5f5</color>
+    <color name="colorDetailBackground">#0f5cac</color>
 
 </resources>
