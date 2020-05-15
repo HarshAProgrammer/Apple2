@@ -5,6 +5,8 @@ Less to spend.
 </string>
     <string name="product_description">Product Description</string>
     <string name="product_detail_description">Product Detail Description</string>
+    <string name="product_detail_image">Watch Image</string>
+    <string name="product_main_image">Watch Image</string>
     <string name="product_title">Title</string>
     <string name="product_image_main">Image</string>
     <string name="product_price_main">Price</string>

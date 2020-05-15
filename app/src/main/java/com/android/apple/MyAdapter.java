@@ -40,6 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
         productViewHolder.mDescription.setText(myProductList.get(i).getProductDescription());
         productViewHolder.mPrice.setText(myProductList.get(i).getProductPrice());
 
+
         productViewHolder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
