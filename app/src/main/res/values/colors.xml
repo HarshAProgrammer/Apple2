@@ -15,6 +15,6 @@
     <color name="colorCardViewBackground">#010101</color>
 
     <color name="colorDetailDescription">#f5f5f5</color>
-    <color name="colorDetailBackground">#0f5cac</color>
+    <color name="colorDetailBackground">#FFFFFF</color>
 
 </resources>
