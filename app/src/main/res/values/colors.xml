@@ -10,6 +10,13 @@
     <color name="colorSplashSecondText">#070707</color>
 
 
+    <color name="colorTextRippleBackground">#010101</color>
+    <color name="colorTextRippleMain">#F6F6F7</color>
+
+    <color name="colorImageRippleBackground">#FDFDFD</color>
+    <color name="colorImageRippleMain">#070707</color>
+
+
 
     <color name="colorMainTitle">#50a2e1</color>
     <color name="colorMainPrice">#692bb1</color>

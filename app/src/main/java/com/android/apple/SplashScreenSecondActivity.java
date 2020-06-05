@@ -6,18 +6,13 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 public class SplashScreenSecondActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN_SECOND_TIME = 3000;
 
-
-    //variables
-    Animation topAnim,bottomAnim;
-    ImageView splashImage;
+    Animation bottomAnim;
     TextView splashText;
 
     @Override
@@ -37,12 +32,12 @@ public class SplashScreenSecondActivity extends AppCompatActivity {
 
     private void setUpUIViewsSplashScreen() {
         //Animation
-       // topAnim = AnimationUtils.loadAnimation(this, R.anim.topsplashanimation);
-        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottomsplashanimation);
+       // topAnim = AnimationUtils.loadAnimation(this, R.anim.top_splash_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_splash_animation);
 
         //Hooks
-       // splashImage = findViewById(R.id.imagesplashsecond);
-        splashText = findViewById(R.id.textsplashsecond);
+       // splashImage = findViewById(R.id.image_splash_second);
+        splashText = findViewById(R.id.text_splash_second);
     }
 
     private void setSplashAnimation() {
@@ -51,6 +46,7 @@ public class SplashScreenSecondActivity extends AppCompatActivity {
     }
 
     private void openMainActivityFromSplash() {
+        int SPLASH_SCREEN_SECOND_TIME = 4000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

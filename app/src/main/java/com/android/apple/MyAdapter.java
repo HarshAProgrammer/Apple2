@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
-    private Context mContext;
-    private List<ProductData> myProductList;
+    private final Context mContext;
+    private final List<ProductData> myProductList;
     private int lastPosition = -1;
 
     public MyAdapter(Context mContext, List<ProductData> myProductList) {
@@ -27,6 +27,7 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
     }
 
 
+    @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
       View mView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_row_item,viewGroup,false);
@@ -71,9 +72,11 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
     }
 }
 class ProductViewHolder extends RecyclerView.ViewHolder{
-    ImageView imageView;
-    TextView mTitle,mDescription,mPrice;
-    CardView mCardView;
+    final ImageView imageView;
+    final TextView mTitle;
+    final TextView mDescription;
+    final TextView mPrice;
+    final CardView mCardView;
 
     public ProductViewHolder( View itemView) {
         super(itemView);

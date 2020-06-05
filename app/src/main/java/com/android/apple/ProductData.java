@@ -1,10 +1,10 @@
 package com.android.apple;
 
 public class ProductData {
-    private String productName;
-    private String productDescription;
-    private String productPrice;
-    private int productImage;
+    private final String productName;
+    private final String productDescription;
+    private final String productPrice;
+    private final int productImage;
 
     public ProductData(String productName, String productDescription, String productPrice, int productImage) {
         this.productName = productName;

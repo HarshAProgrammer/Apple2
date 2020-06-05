@@ -10,7 +10,7 @@
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="0dp"
         android:id="@+id/anim_splash_second"
-        android:layout_above="@+id/textsplashsecond"
+        android:layout_above="@id/text_splash_second"
         android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/mlogo_splash_anim"
+        app:lottie_rawRes="@raw/m_logo_splash_anim"
         android:contentDescription="@string/second_splash_animation_description"/>
 <!--    <ImageView-->
-<!--        android:id="@+id/imagesplashsecond"-->
+<!--        android:id="@+id/image_splash_second"-->
 <!--        android:layout_width="300dp"-->
 <!--        android:layout_height="200dp"-->
 <!--        android:src="@drawable/splashscreen"-->
@@ -31,7 +31,7 @@
 <!--        android:contentDescription="@string/splash_image_second_description" />-->
 
     <TextView
-        android:id="@+id/textsplashsecond"
+        android:id="@+id/text_splash_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/anim_splash_second"

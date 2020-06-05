@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 class TransitionDialogue
 {
     private AlertDialog dialogue;
-    private Activity activity;
+    private final Activity activity;
 
     TransitionDialogue(Activity myActivity){
         activity = myActivity;
