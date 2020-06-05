@@ -18,7 +18,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/mlogo_splash_anim" />
+        app:lottie_rawRes="@raw/mlogo_splash_anim"
+        android:contentDescription="@string/second_splash_animation_description"/>
 <!--    <ImageView-->
 <!--        android:id="@+id/imagesplashsecond"-->
 <!--        android:layout_width="300dp"-->

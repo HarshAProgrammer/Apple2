@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">iPhone</string>
     <string name="splash_text_first">Hello</string>
-    <string name="splash_image_second_description">Apple Inc.</string>
+    <string name="second_splash_animation_description">Apple Inc.</string>
     <string name="splash_text_second">Lots to love.
 Less to spend.
 </string>

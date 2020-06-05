@@ -56,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
     public void setAnimation(View viewToAnimate,int position){
         if(position>lastPosition){
             ScaleAnimation MainActivityAnimation = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-            MainActivityAnimation.setDuration(550);
+            MainActivityAnimation.setDuration(350);
             viewToAnimate.startAnimation(MainActivityAnimation);
             lastPosition = position;
         }

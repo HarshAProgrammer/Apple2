@@ -38,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
             public void run() {
                 transitionDialogue.dismissDialogue();
             }
-        },2000);
+        },4500);
     }
 
 
