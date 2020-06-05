@@ -1,13 +1,17 @@
 <resources>
     <string name="app_name">iPhone</string>
-    <string name="splash_text">Lots to love.
+    <string name="splash_text_first">Hello</string>
+    <string name="splash_image_second_description">Apple Inc.</string>
+    <string name="splash_text_second">Lots to love.
 Less to spend.
 </string>
-    <string name="product_description">Product Description</string>
-    <string name="product_detail_description">Product Detail Description</string>
-    <string name="product_detail_image">Watch Image</string>
-    <string name="product_main_image">Watch Image</string>
-    <string name="product_title">Title</string>
-    <string name="product_image_main">Image</string>
-    <string name="product_price_main">Price</string>
+    <string name="iphone_image_main">iPhone Image</string>
+    <string name="iphone_title">iPhone Name</string>
+    <string name="iphone_price_main">iPhone Price</string>
+    <string name="iphone_description">iPhone Description</string>
+    <string name="iphone_detail_image">iPhone Image</string>
+    <string name="iphone_detail_description">iPhone Detail Description</string>
+
+
+
 </resources>

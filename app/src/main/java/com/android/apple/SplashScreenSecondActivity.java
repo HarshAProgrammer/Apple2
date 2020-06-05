@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-public class SplashScreenActivity extends AppCompatActivity {
+public class SplashScreenSecondActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN_SECOND_TIME = 3000;
 
 
     //variables
@@ -24,28 +24,40 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_splash_screen_second);
 
+        setUpUIViewsSplashScreen();
+
+        setSplashAnimation();
+
+        openMainActivityFromSplash();
+
+
+    }
+
+    private void setUpUIViewsSplashScreen() {
         //Animation
-        topAnim = AnimationUtils.loadAnimation(this,R.anim.topsplashanimation);
-        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottomsplashanimation);
+       // topAnim = AnimationUtils.loadAnimation(this, R.anim.topsplashanimation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottomsplashanimation);
 
         //Hooks
-        splashImage = findViewById(R.id.imagesplash);
-        splashText = findViewById(R.id.textsplash);
+       // splashImage = findViewById(R.id.imagesplashsecond);
+        splashText = findViewById(R.id.textsplashsecond);
+    }
 
-
-        splashImage.setAnimation(topAnim);
+    private void setSplashAnimation() {
+       // splashImage.setAnimation(topAnim);
         splashText.setAnimation(bottomAnim);
+    }
 
+    private void openMainActivityFromSplash() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent openMainActivityFromSplashScreenActivity = new Intent(SplashScreenActivity.this,MainActivity.class);
+                Intent openMainActivityFromSplashScreenActivity = new Intent(SplashScreenSecondActivity.this, MainActivity.class);
                 startActivity(openMainActivityFromSplashScreenActivity);
                 finish();
             }
-        },SPLASH_SCREEN);
-
+        }, SPLASH_SCREEN_SECOND_TIME);
     }
 }

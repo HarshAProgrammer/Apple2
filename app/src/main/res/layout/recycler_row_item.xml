@@ -20,7 +20,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_marginTop="10dp"
-                    android:contentDescription="@string/product_image_main"
+                    android:contentDescription="@string/iphone_image_main"
                     android:id="@+id/ivRecyclerRowItemImage"
                     android:layout_weight="4"
                     android:scaleType="centerCrop"
@@ -43,10 +43,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/product_title"
+                        android:text="@string/iphone_title"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/colorTitle"
+                        android:textColor="@color/colorMainTitle"
                         android:maxLines="1"
                         android:id="@+id/tvRecyclerRowItemTitle">
 
@@ -54,8 +54,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/product_description"
-                        android:textColor="@color/colorDescription"
+                        android:text="@string/iphone_description"
+                        android:textColor="@color/colorMainDescription"
                         android:textSize="18sp"
                         android:maxLines="1"
                         android:id="@+id/tvRecyclerRowItemDescription">
@@ -71,10 +71,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/product_price_main"
+                        android:text="@string/iphone_price_main"
                         android:textSize="13sp"
                         android:textAlignment="center"
-                        android:textColor="@color/colorPrice"
+                        android:textColor="@color/colorMainPrice"
                         android:id="@+id/tvRecyclerRowItemPrice"
                         android:gravity="center_horizontal"
                         android:textStyle="italic">

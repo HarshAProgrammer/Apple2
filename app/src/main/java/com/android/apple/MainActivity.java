@@ -18,8 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
 
+        setUpUIViewsMainActivity();
+        loadDataMainActivity();
+
+
+
+    }
+    private void setUpUIViewsMainActivity(){
+        mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
+    }
+    private void loadDataMainActivity(){
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 1);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         myProductList = new ArrayList<>();
@@ -244,6 +253,5 @@ public class MainActivity extends AppCompatActivity {
 
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, myProductList);
         mRecyclerView.setAdapter(myAdapter);
-
     }
 }
