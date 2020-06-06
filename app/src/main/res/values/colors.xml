@@ -4,31 +4,31 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#F3000908</color>
 
-    <color name="colorSplashFirstBackground">#000908</color>
+    <color name="colorSplashFirstBackground">#000000</color>
     <color name="colorSplashFirstText">#FFFFFF</color>
     <color name="colorSplashSecondBackground">#FFFFFF</color>
-    <color name="colorSplashSecondText">#070707</color>
+    <color name="colorSplashSecondText">#000000</color>
 
 
-    <color name="colorTextRippleBackground">#010101</color>
-    <color name="colorTextRippleMain">#F6F6F7</color>
+    <color name="colorTextRippleBackground">#000000</color>
+    <color name="colorTextRippleMain">#353535</color>
 
     <color name="colorImageRippleBackground">#FDFDFD</color>
-    <color name="colorImageRippleMain">#070707</color>
+    <color name="colorImageRippleMain">#C3C2C2</color>
 
 
 
-    <color name="colorMainTitle">#50a2e1</color>
-    <color name="colorMainPrice">#692bb1</color>
+    <color name="colorMainTitle">#F5F5F7</color>
+    <color name="colorMainPrice">#2997FF</color>
     <color name="colorMainDescription">#00006c</color>
-    <color name="colorMainBackground">#f5f5f5</color>
-    <color name="colorCardViewBackground">#010101</color>
+    <color name="colorMainBackground">#FFFFFF</color>
+    <color name="colorCardViewBackground">#000000</color>
 
 
-    <color name="colorTransitionBackground">#010101</color>
+    <color name="colorTransitionBackground">#000000</color>
 
 
-    <color name="colorDetailDescription">#f5f5f5</color>
-    <color name="colorDetailBackground">#FFFFFF</color>
+    <color name="colorDetailDescription">#1D1D1F</color>
+    <color name="colorDetailBackground">#FAFAFA</color>
 
 </resources>
