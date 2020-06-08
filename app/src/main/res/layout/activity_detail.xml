@@ -18,7 +18,6 @@
             android:layout_height="400dp"
             android:layout_marginTop="10dp"
             android:layout_weight="4"
-            android:background="@drawable/image_ripple_background"
             android:contentDescription="@string/iphone_detail_image"
             android:scaleType="centerCrop"
             android:src="@drawable/splashscreen" />

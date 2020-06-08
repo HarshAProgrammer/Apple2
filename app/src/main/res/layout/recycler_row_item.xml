@@ -11,6 +11,7 @@
         app:cardElevation="3dp"
         android:layout_margin="4dp"
         app:cardUseCompatPadding="true"
+
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,10 +26,7 @@
                     android:id="@+id/ivRecyclerRowItemImage"
                     android:layout_weight="4"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/splashscreen"
-                    android:background="@drawable/image_ripple_background"
-
-                    >
+                    android:src="@drawable/splashscreen">
                 </ImageView>
             <LinearLayout
                 android:layout_width="match_parent"

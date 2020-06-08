@@ -46,7 +46,7 @@ public class SplashScreenSecondActivity extends AppCompatActivity {
     }
 
     private void openMainActivityFromSplash() {
-        int SPLASH_SCREEN_SECOND_TIME = 4000;
+        int SPLASH_SCREEN_SECOND_TIME = 3200;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

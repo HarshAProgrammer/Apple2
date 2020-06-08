@@ -11,10 +11,7 @@
 
 
     <color name="colorTextRippleBackground">#000000</color>
-    <color name="colorTextRippleMain">#353535</color>
-
-    <color name="colorImageRippleBackground">#FDFDFD</color>
-    <color name="colorImageRippleMain">#C3C2C2</color>
+    <color name="colorTextRippleMain">#4D353535</color>
 
 
 
