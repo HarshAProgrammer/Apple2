@@ -10,7 +10,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp">
+        android:layout_height="400dp"
+        android:background="@drawable/radius">
 
         <com.dmallcott.dismissibleimageview.DismissibleImageView
             android:id="@+id/ivDetailImage"
