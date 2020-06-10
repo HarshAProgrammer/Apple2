@@ -10,16 +10,16 @@
     <color name="colorSplashSecondText">#000000</color>
 
 
-    <color name="colorTextRippleBackground">#000000</color>
-    <color name="colorTextRippleMain">#4D353535</color>
+    <color name="colorTextRippleBackground">#FDFCFC</color>
+    <color name="colorTextRippleMain">#4DE3E1E1</color>
 
 
 
-    <color name="colorMainTitle">#F5F5F7</color>
+    <color name="colorMainTitle">#0B0B0B</color>
     <color name="colorMainPrice">#2997FF</color>
     <color name="colorMainDescription">#00006c</color>
     <color name="colorMainBackground">#FFFFFF</color>
-    <color name="colorCardViewBackground">#000000</color>
+    <color name="colorCardViewBackground">#FDFCFC</color>
 
 
     <color name="colorTransitionBackground">#000000</color>
