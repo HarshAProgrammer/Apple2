@@ -1,18 +1,32 @@
 package com.android.apple;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     List<ProductData> myProductList;
     ProductData mProductData;
+
+    TextView tv_output;
+
+    int output;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +34,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setUpUIViewsMainActivity();
+
+        setupPeopleViewing();
+
         loadDataMainActivity();
 
+    }
+
+
+
+    private void setUpUIViewsMainActivity(){
+        mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
 
 
     }
-    private void setUpUIViewsMainActivity(){
-        mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
+    private void setupPeopleViewing() {
+        Random random = new Random();
+        output = random.nextInt(20-3) + 3;
+        tv_output.setText(output + " people are currently viewing this iPhone");
+
     }
     private void loadDataMainActivity(){
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 1);

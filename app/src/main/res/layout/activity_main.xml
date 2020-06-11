@@ -6,14 +6,28 @@
     android:background="@color/colorMainBackground"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rvMainRecycler"
-        android:scrollbars="vertical"
+        android:layout_height="match_parent"
+        android:scrollbarSize="25sp"
+        android:id="@+id/svMainScroll"
         >
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMainRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

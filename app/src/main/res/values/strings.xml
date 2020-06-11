@@ -9,6 +9,8 @@ Less to spend.
     <string name="iphone_title">iPhone Name</string>
     <string name="iphone_price_main">iPhone Price</string>
     <string name="iphone_description">iPhone Description</string>
+    <string name="iphone_description_input">people are currently viewing this iPhone</string>
+
     <string name="iphone_detail_image">iPhone Image</string>
     <string name="iphone_detail_description">iPhone Detail Description</string>
 
