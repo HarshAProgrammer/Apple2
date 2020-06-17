@@ -1,16 +1,23 @@
 package com.android.apple;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.w3c.dom.Text;
 
@@ -23,9 +30,12 @@ public class MainActivity extends AppCompatActivity {
     List<ProductData> myProductList;
     ProductData mProductData;
 
-    TextView tv_output;
+    private long backPressedTime;
+    private LinearLayout mainLayout;
 
-    int output;
+//    TextView tv_output;
+//
+//    int output;
 
 
     @Override
@@ -35,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
         setUpUIViewsMainActivity();
 
-        setupPeopleViewing();
+//        setupPeopleViewing();
 
         loadDataMainActivity();
+
+
 
     }
 
@@ -45,20 +57,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpUIViewsMainActivity(){
         mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
+        mainLayout = (LinearLayout) findViewById(R.id.LinLayoutMain);
 
 
     }
-    private void setupPeopleViewing() {
-        Random random = new Random();
-        output = random.nextInt(20-3) + 3;
-        tv_output.setText(output + " people are currently viewing this iPhone");
-
-    }
+//    private void setupPeopleViewing() {
+//        Random random = new Random();
+//        output = random.nextInt(20-3) + 3;
+//        tv_output.setText(output + R.string.iphone_description_input);
+//
+//    }
     private void loadDataMainActivity(){
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 1);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         myProductList = new ArrayList<>();
-        mProductData = new ProductData("iPhone", "•\tDisplay\t\t3.50-inch (320x480)\n" +
+        mProductData = new ProductData("iPhone",
+//                tv_output +
+//                "\n" +
+//                "\n" +
+                "•\tDisplay\t\t3.50-inch (320x480)\n" +
                 "•\tProcessor\t412 MHz one-core\n" +
                 "•\tFront Camera\tNo\n" +
                 "•\tRear Camera\t2MP\n" +
@@ -279,5 +296,41 @@ public class MainActivity extends AppCompatActivity {
 
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, myProductList);
         mRecyclerView.setAdapter(myAdapter);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(backPressedTime + 2000 > System.currentTimeMillis()){
+            super.onBackPressed();
+            return;
+        } else {
+            Snackbar exitSnackbar = Snackbar.make(mainLayout, "Click Back again to Exit", Snackbar.LENGTH_LONG);
+            exitSnackbar.setDuration(10000);
+            exitSnackbar.setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE);
+            View snackView = exitSnackbar.getView();
+            TextView tvExitSnack = snackView.findViewById(R.id.snackbar_text);
+            tvExitSnack.setTextColor(Color.WHITE);
+            exitSnackbar.show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }

@@ -33,4 +33,9 @@ public class SplashScreenFirstActivity extends AppCompatActivity {
             }
         }, SPLASH_SCREEN_FIRST_TIME);
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
