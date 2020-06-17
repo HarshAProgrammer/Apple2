@@ -27,7 +27,6 @@
             />
         <activity
             android:name=".DetailActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             />
     </application>
 
