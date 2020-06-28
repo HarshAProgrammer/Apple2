@@ -8,7 +8,7 @@
     tools:context=".SplashScreenSecondActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:id="@+id/anim_splash_second"
         android:layout_above="@id/text_splash_second"
         android:layout_height="400dp"
@@ -16,19 +16,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/m_logo_splash_anim"
         android:contentDescription="@string/second_splash_animation_description"/>
-<!--    <ImageView-->
-<!--        android:id="@+id/image_splash_second"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:src="@drawable/splashscreen"-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginBottom="50dp"-->
-<!--        android:contentDescription="@string/splash_image_second_description" />-->
 
     <TextView
         android:id="@+id/text_splash_second"
@@ -38,10 +31,12 @@
         android:text="@string/second_splash_text"
         android:textColor="@color/colorSplashSecondText"
         android:textSize="20sp"
+        android:paddingBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/anim_splash_second" />
+        app:layout_constraintTop_toBottomOf="@+id/anim_splash_second"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

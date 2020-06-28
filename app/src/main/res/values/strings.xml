@@ -2,7 +2,7 @@
     <string name="app_name">iPhone</string>
     <string name="splash_text_first">Hello</string>
     <string name="second_splash_animation_description">Apple Inc.</string>
-    <string name="splash_text_second">Lots to love.
+    <string name="second_splash_text">Lots to love.
 Less to spend.
 </string>
     <string name="iphone_image_main">iPhone Image</string>
