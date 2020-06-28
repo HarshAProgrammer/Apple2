@@ -4,6 +4,13 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#F3000908</color>
 
+
+
+
+    <color name="toolbarText">#FFFFFF</color>
+    <color name="toolbarBackground">#050505</color>
+
+
     <color name="colorSplashFirstBackground">#000000</color>
     <color name="colorSplashFirstText">#FFFFFF</color>
     <color name="colorSplashSecondBackground">#FFFFFF</color>

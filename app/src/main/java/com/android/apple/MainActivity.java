@@ -2,7 +2,9 @@ package com.android.apple;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Layout;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -30,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
     List<ProductData> myProductList;
     ProductData mProductData;
 
+    private Toolbar toolbar;
+
     private long backPressedTime;
-    private LinearLayout mainLayout;
+    private CoordinatorLayout mainLayout;
 
 //    TextView tv_output;
 //
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setUpUIViewsMainActivity();
+        initToolbar();
 
 //        setupPeopleViewing();
 
@@ -56,10 +62,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setUpUIViewsMainActivity(){
+        toolbar = (Toolbar) findViewById(R.id.toolbarMainPage);
         mRecyclerView = (RecyclerView) findViewById(R.id.rvMainRecycler);
-        mainLayout = (LinearLayout) findViewById(R.id.LinLayoutMain);
+        mainLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayoutMain);
 
 
+    }
+    private void initToolbar() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Apple");
     }
 //    private void setupPeopleViewing() {
 //        Random random = new Random();
