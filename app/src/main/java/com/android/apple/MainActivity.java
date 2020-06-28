@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Layout;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     ProductData mProductData;
 
     private Toolbar toolbar;
+
+
 
     private long backPressedTime;
     private CoordinatorLayout mainLayout;

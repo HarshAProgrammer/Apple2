@@ -2,6 +2,8 @@ package com.android.apple;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
@@ -10,6 +12,8 @@ import android.widget.TextView;
 public class DetailActivity extends AppCompatActivity {
     TextView productDescription;
     ImageView productImage;
+    private Typeface detailDescriptionFont;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class DetailActivity extends AppCompatActivity {
     private void setUpUIViewsDetailActivity() {
         productDescription = (TextView) findViewById(R.id.tvDetailDescription);
         productImage = (ImageView) findViewById(R.id.ivDetailImage);
+        detailDescriptionFont = Typeface.createFromAsset(this.getAssets(),"fonts/OpenSansCondensed-Bold.ttf");
+        productDescription.setTypeface(detailDescriptionFont);
     }
     private void setTransitionDialogue(){
         final TransitionDialogue transitionDialogue =new TransitionDialogue(DetailActivity.this);
@@ -50,5 +56,11 @@ public class DetailActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent openMainActivityFromDetail = new Intent(DetailActivity.this,MainActivity.class);
+        startActivity(openMainActivityFromDetail);
     }
 }
