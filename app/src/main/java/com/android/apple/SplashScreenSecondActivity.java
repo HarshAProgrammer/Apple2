@@ -9,6 +9,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class SplashScreenSecondActivity extends AppCompatActivity {
 
 
@@ -53,6 +56,7 @@ public class SplashScreenSecondActivity extends AppCompatActivity {
                 Intent openMainActivityFromSplashScreenActivity = new Intent(SplashScreenSecondActivity.this, MainActivity.class);
                 startActivity(openMainActivityFromSplashScreenActivity);
                 finish();
+                Animatoo.animateSlideUp(SplashScreenSecondActivity.this);
             }
         }, SPLASH_SCREEN_SECOND_TIME);
     }

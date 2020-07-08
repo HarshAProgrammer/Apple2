@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
@@ -49,6 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<ProductViewHolder>{
                 openDetailActivityFromMContext.putExtra("Image",myProductList.get(productViewHolder.getAdapterPosition()).getProductImage());
                 openDetailActivityFromMContext.putExtra("Description",myProductList.get(productViewHolder.getAdapterPosition()).getProductDescription());
                 mContext.startActivity(openDetailActivityFromMContext);
+                Animatoo.animateSwipeLeft(mContext);
             }
         });
 

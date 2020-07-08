@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class SplashScreenFirstActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +33,8 @@ public class SplashScreenFirstActivity extends AppCompatActivity {
                 Intent openSplashScreenSecondActFromSplashScreenFirst = new Intent(SplashScreenFirstActivity.this, SplashScreenSecondActivity.class);
                 startActivity(openSplashScreenSecondActFromSplashScreenFirst);
                 finish();
+                Animatoo.animateSlideUp(SplashScreenFirstActivity.this);
+
             }
         }, SPLASH_SCREEN_FIRST_TIME);
     }
