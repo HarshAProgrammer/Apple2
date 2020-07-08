@@ -1,8 +1,10 @@
-package com.android.apple;
+package com.android.apple.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
+
+import com.android.apple.R;
 
 class TransitionDialogue
 {

@@ -1,4 +1,4 @@
-package com.android.apple;
+package com.android.apple.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.apple.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class SplashScreenFirstActivity extends AppCompatActivity {

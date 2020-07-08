@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor">
         <activity
-            android:name=".SplashScreenFirstActivity"
+            android:name=".activities.SplashScreenFirstActivity"
 
             >
             <intent-filter>
@@ -20,13 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreenSecondActivity"/>
+        <activity android:name=".activities.SplashScreenSecondActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             />
         <activity
-            android:name=".DetailActivity"
+            android:name=".activities.DetailActivity"
             />
     </application>
 

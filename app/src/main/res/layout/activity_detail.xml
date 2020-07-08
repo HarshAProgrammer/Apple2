@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorDetailBackground"
     android:orientation="vertical"
     android:scrollbars="vertical"
-    tools:context=".DetailActivity">
+    tools:context=".activities.DetailActivity"
+    app:layoutDescription="@xml/activity_detail_scene">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        >
 
-        <com.dmallcott.dismissibleimageview.DismissibleImageView
-            android:id="@+id/ivDetailImage"
-            android:layout_width="0dp"
-            android:layout_height="400dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="4"
-            android:contentDescription="@string/iphone_detail_image"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splashscreen" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivDetailImage"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:baselineAligned="false"
-        android:weightSum="2">
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/iphone_detail_image"
+        android:src="@drawable/splashscreen"
+        app:layout_constraintBottom_toTopOf="@+id/linLayDetail2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linLayDetail1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/description_title_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDetailImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:text="Rolex Watch Name"
+            android:textColor="@android:color/background_dark"
+            android:textSize="22sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linLayDetail2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -61,4 +82,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

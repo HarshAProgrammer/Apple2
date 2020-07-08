@@ -1,4 +1,4 @@
-package com.android.apple;
+package com.android.apple.adapters;
 
 public class ProductData {
     private final String productName;
