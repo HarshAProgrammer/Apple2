@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.apple.R;
 
 class TransitionDialogue
@@ -16,6 +17,8 @@ class TransitionDialogue
     }
 
     void startTransitionDialogue(){
+
+
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
         LayoutInflater inflate = activity.getLayoutInflater();
